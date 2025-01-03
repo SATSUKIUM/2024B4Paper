@@ -12,6 +12,15 @@
 - VSCodeへのTeXの設定方法
 - VSCodeのキーボードショートカット
 
+## LaTeX環境構築
+わかりやすい記事に丸投げする。
+https://qiita.com/fuku_uma/items/e5ad46125a9612320273
+を参考に、
+- LaTeXのインストール
+- .latexmkrcの設定
+- VSCodeの拡張機能の設定
+の三つを行なってください。**ただし、VSCodeの設定に関しては、`DOCUMENTS/data.txt`の内容をコピペするのがいいでしょう。
+
 ## github について
 
 githubではスクリプトやマクロを共同編集できます。1つのファイルをgithubで共同編集する流れを理解するためにはいくつかの専門用語を知ってもらう必要があります。
