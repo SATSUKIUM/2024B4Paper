@@ -127,6 +127,11 @@ githubのローカルリポジトリで作業する場合、例えば環境依�
     - `Username@PC ~/github_local_rep % git commit -m "remove trash"` など
     - `Username@PC ~/github_local_rep % git push origin main` など
 
+## リポジトリのクローンに成功したら
+さっそくTeXのソースコードに何か追記してビルドしてみましょう。`./TEX/TEX/main.tex` の本文のどこかを編集してから`Cmd + Opt + B`でソースコードをビルドできる。エラーが出なければ、そのディレクトリにmain.pdfが生成されているはず。
+
+もしくは、ビルドしたpdfをVSCodeで右側に開いておくこともできる。`Cmd + Opt + V`でpdfが右に開きます。
+
 ## Tips
 ここにはTeXのコツなどを書こうかな。
 
