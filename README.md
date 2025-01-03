@@ -30,7 +30,7 @@ githubではスクリプトやマクロを共同編集できます。1つのフ�
 - ローカルに作業用ディレクトリを作ります
     - 例 `Username@PC ~ % mkdir github_local_rep`
 - リモートリポジトリをローカルにクローン(clone)します
-    - `Username@PC ~/github_local_rep % git clone git@github.com:SATSUKIUM/2024B4Experiment.git`
+    - `Username@PC ~/github_local_rep % git clone git@github.com:SATSUKIUM/2024B4Paper.git`
     - 次にいちおうおまじないとして、pullしておいてください。`Username@PC ~/github_local_rep % git pull origin main`
 
 ## 変更をプッシュ(push)する
@@ -87,16 +87,15 @@ githubのローカルリポジトリで作業する場合、例えば環境依�
 - `.gitignore`というファイルが生成されるはずなので、それを例えばVSCodeなどで開いて、共有すべきでないフォルダやファイルを書きましょう。__.gitignore自身を記述することをお勧めします__
 #### 記述例
 ```
-./.vscode/
-./scripts/.vscode/
-./scripts/.DS_Store
 .gitignore
-.DS_Store
-FETCH_HEAD
-./scripts/figure/
-./data/
-./sharing/
-./scripts/figure/
+./.DS_Store
+./TEX/.DS_Store
+./TEX/TEX/.DS_Store
+./TEX/*.pdf
+*.fls
+*.fdb_latexmk
+*.log
+*.aux
 ```
 ### 不必要なファイルを共有してしまった場合
 .gitignoreの設定を変更しようと考える時、それはすでに不必要なファイルをプッシュしてしまってリモートリポジトリがとっ散らかってしまっている状況であると推測します。とっ散らかったファイルの片付けについても説明します。<br>
@@ -109,9 +108,7 @@ FETCH_HEAD
     - `Username@PC ~/github_local_rep % git push origin main` など
 
 ## Tips
-- 動かないテストコードをどう管理するか悩む
-    - `/scripts/test/`などのディレクトリを作って、その中にテストコードをぶち込んでおく。
-    - もし共有したくなければ、.gitignoreに `./scripts/test/`などと書いておく。
+ここにはTeXのコツなどを書こうかな。
 
 ## 注意
 - Windows環境ではコロン(:)はディレクトリシステム上で特殊文字として認識されるため、ファイル名にコロンが含まれれているときにエラーを吐きます。まあ、Windowsなんて使ってる人いないだろうけど...
