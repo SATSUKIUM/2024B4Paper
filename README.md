@@ -19,6 +19,7 @@ https://qiita.com/fuku_uma/items/e5ad46125a9612320273
 - LaTeXのインストール
 - .latexmkrcの設定
 - VSCodeの拡張機能の設定
+
 の三つを行なってください。**ただし、VSCodeの設定に関しては、`DOCUMENTS/data.txt`の内容をコピペするのがいいでしょう。
 
 ## github について
