@@ -1,0 +1,128 @@
+\documentclass[a4paper,dvipdfmx,titlepage,oneside]{jsarticle}
+\usepackage{subfiles}
+\usepackage{amsmath,latexsym,mathtools,bm,ulem,tikz,circuitikz,graphicx}
+\usepackage{times}
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage{here}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{upgreek}%ギリシャ文字を立てる
+\usepackage{url}
+%Tcolorboxを使う
+\usepackage{tcolorbox}
+% \lstset{
+% 	basicstyle={\ttfamily},
+% 	identifierstyle={\small},
+% 	commentstyle={\smallitshape},
+% 	keywordstyle={\small\bfseries},
+% 	ndkeywordstyle={\small},
+% 	stringstyle={\small\ttfamily},
+% 	frame={tb},
+% 	breaklines=true,
+% 	columns=[l]{fullflexible},
+% 	numbers=left,
+% 	xrightmargin=0zw,
+% 	xleftmargin=3zw,
+% 	numberstyle={\scriptsize},
+% 	stepnumber=1,
+% 	numbersep=1zw,
+% 	lineskip=-0.5ex
+% }
+\tcbuselibrary{breakable,skins,theorems}
+\newenvironment{satsuki}[1]{\begin{tcolorbox}[enhanced,
+		sharp corners,
+		boxsep=4mm,
+		colframe = white,
+		colback = red!7,
+		title = #1,
+		fonttitle = \bfseries,
+		breakable = true,
+		coltitle = black,
+		attach boxed title to top left = {xshift=3mm, yshift=-3mm}, 
+		boxed title style = {colframe = green!35!black, colback = white},
+		top = 4mm]}{\end{tcolorbox}}
+
+\usepackage{mhchem}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\usepackage{wrapfig}%文中に画像を入れる
+
+\usepackage{amsthm,amsfonts,amssymb}
+
+\title{卒業論文(仮)
+\large{\\--- 於 大阪大学H009 ---}}
+\author{auther\quad\quad idetification\\大阪大学 青木研究室}
+\date{\today}
+\begin{document}
+	\maketitle
+	\tableofcontents
+\section{本実験で行ったこと}
+	\subsection{概要}
+		地球外からもたらされる放射線は宇宙線と呼ばれ、地表で観測される宇宙線の多くは二次宇宙線である。二次宇宙線、特に数量が多い荷電粒子であるミューオンの到来数は角度依存性があることが知られている。今回の実験ではその天頂角分布に着目し、その分布と絶対量がどれくらいであるか測定を行った。測定においては、プラスチックシンチレータとPMTなどの配置を工夫することで到来方向の情報を得る方法をとった。結果としては、天頂角分布は天頂角の単調減少の傾向があり、$\pm15$ \si{\degree}の角度分解能で$15$ cm角の検出面積に対し毎秒$0.023\,-\,0.137$回のカウントを得た。
+
+		測定結果に対し理論モデルに基づいて3つのフィッティングパラメータ$p_0,\,p_1,\,p_2$を用いて$p_0\cos^{p_1}\theta+p_2$でフィッティングを行い、パラメータを決定した。
+
+	\newpage
+	日程とリストアップはメンバーでの行程管理用。提出次には消します。
+	\subsection{日程}
+		\begin{itemize}
+			\item 6/26 天頂角分布の測定に時間的なレートの振れがあった。これをコインシデンスの信号の波形が汚いことが原因であるかもしれないと予想し、それの解決に取り組んだ。
+			\item 6/27 低トリガーで暗電流の波高分布を見た。(56, 76, 96 mV)トリガーはオシロスコープでPMTの波高にかけたので、コインシデンスは取っていない。すべて暗電流の山の「すそ」しか見えなかった。
+			\item 6/27 低トリガー測定中に、時間幅がとても長く汚い波形がいくつか見られたため、それの判別などをするために最大波高と電荷量の散布図を書いて、正常な波形と異常な波形の分別をした。これはとても上手く行った
+			\item 6/28 光漏れを疑った。
+			\item 6/30 光漏れの改善を行った。確かにこれ以前は光漏れをしていた。
+			\item 7/1 光漏れ対策後の波形を重ねて表示すると、トリガーの500 nsあとくらいにアフターパルスの傾向が見られた。
+			\item 7/1 暗電流ノイズレートを直接測る方法を思いついて、測定した。
+			\item 7/2 スケーラの挙動が壊れた。次の日には勝手に治った。
+			\item 7/2 ジッタによるディスクリ信号の幅の変動とか、1パルスに2回ディスクリ信号が出ることが気になった。
+			\item 7/8 ディスクリミネータのしきい値を下げて、2つのPMTのコインシデンスを取ったときの波高分布を見た。これは暗電流と宇宙線との明確な波高の違いを与えてくれた。
+			\item 7/16〜 発表資料作り
+			\item 7/24 昼夜差があるかどうか、YouTubeライブを使ってモニタリングした。詳しい解析はできてないけど、昼夜差はなかった。
+			\item 7/29(たぶん) 発表
+		\end{itemize}
+	\subsection{リストアップ}
+	\begin{itemize}
+		\item 宇宙線天頂各分布のための実験
+		\begin{itemize}
+			\item \sout{宇宙線(荷電粒子)がシンチレーターに与えるエネルギーと実際の波形との比較による装置の健全性の見積もり}
+			\begin{itemize}
+				\item \sout{宇宙線ミューオンがシンチレーター内で落とすエネルギーと、オシロスコープの波形からいくらかの仮定を置いて概算したエネルギーとの比較をし、$\pm1$桁のズレに収まっており、確かに宇宙線を計測できていると考えたのであった。}
+				\begin{itemize}
+					\item PMT光電面の量子効率
+					\item \sout{PMTの増幅率}
+					\item シンチレーターの発光効率
+					\item \sout{MIPとは}
+					\item シンチレーターからPMTへの集光率
+				\end{itemize}
+				\item \sout{オシロスコープのトリガー機能の使い方}
+				\begin{itemize}
+					\item \sout{「宇宙線」とはいえど、それがノイズなのかどうか安直に判断するのは良くない。1イベント、たしか600マイクロ秒だと思うけど、波形の波高分布を調べるとノイズがどれくらいの波高分布を持つか分かった。(5/10)}
+				\end{itemize}
+			\end{itemize}
+			\item \sout{どんなレートか知る実験}
+			\begin{itemize}
+				\item \sout{シンチレータの離す距離を変えた}
+				\begin{itemize}
+					\item \sout{6/19まとめにカウントレート記載}
+				\end{itemize}
+				\item どれくらいの精度で測定\textgt{したい}かによる
+				\item 統計を貯めれば貯めるほど誤差の少ない計数率になるが、それにいつも意味があるとは限らない。どんなものを説明したいか、それに必要な統計量とはどれくらいか事前に見極めることが重要である。
+			\end{itemize}
+		\end{itemize}
+		\item 予備実験
+	\end{itemize}
+
+	\newpage
+	\subfile{subfiles/theory/theory.tex}
+	\subfile{subfiles/theory/theory2.tex}
+	\subfile{subfiles/pulsehight/pulsehight.tex}
+	\subfile{subfiles/distance/distance.tex}
+	\subfile{subfiles/low-discr/low-discr.tex}
+	\subfile{subfiles/shading/shading.tex}
+	\subfile{subfiles/dist/dist.tex}
+	\subfile{subfiles/conclusion-future/conclusion-future.tex}
+	\subfile{subfiles/appendix/appendix.tex}
+	\subfile{subfiles/feedback/feedback.tex}
+	\subfile{subfiles/citation/citation.tex}
+\end{document}

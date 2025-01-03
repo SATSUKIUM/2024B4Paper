@@ -1,0 +1,27 @@
+\documentclass[../../main.tex]{subfiles}
+\usepackage{amsmath,amsthm,amsfonts,latexsym,mathtools,bm,ulem,amssymb,tikz,circuitikz,graphicx}
+\usepackage{times}
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage{here}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{mhchem}
+\usepackage{upgreek}%ギリシャ文字を立てるのだ
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\usepackage{wrapfig}%文中に画像を入れる
+\begin{document}
+\section{付録}
+  ローカルすぎる学習内容をこの章に記す。
+  \subsection{オシロスコープDAQの作業}
+    \begin{itemize}
+      \item \textgt{LANケーブルが刺さっているか確認する}
+      \item PC側でTCP/IP→IPv4の設定→DHCP手動→IPアドレス(自機)"192.168.10.$\sim$"、サブネットマスク"255.255.255.0"
+      \item オシロスコープ側で"192.168.10.10"
+      \item (PCからping飛ばしてみる)
+      \item run.shのあるディレクトリで"./run.sh \%d"(詳細はDAQコードのコマンドライン引数を確認してみるとか、シェルスクリプト側を書き換えてみるなど...)
+    \end{itemize}
+	\subsection{過去の卒研の記述}
+    『空気シャワーの観測』によると空気シャワーの広がりを調べたそう。それを参考にすると空気シャワーの広がりってめっちゃ小さい... consistentかどうかは追って調べる必要がありそう。
+\end{document}

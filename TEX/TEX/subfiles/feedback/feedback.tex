@@ -1,0 +1,54 @@
+\documentclass[../../main.tex]{subfiles}
+\usepackage{amsmath,amsthm,amsfonts,latexsym,mathtools,bm,ulem,amssymb,tikz,circuitikz,graphicx}
+\usepackage{times}
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage{here}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{mhchem}
+\usepackage{upgreek}%ギリシャ文字を立てるのだ
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\usepackage{wrapfig}%文中に画像を入れる
+\begin{document}
+\section{フィードバック}
+  \textgt{前期レポートで先生からもらったフィードバックを一応残してます。}
+
+
+  この報告書について、先生からいただいたフィードバックをまとめる。次回以降のレポートを書くときに気をつける事項を箇条書きにする。
+  \subsection{概要}
+    \begin{itemize}
+      \item 数値を示す際、$0.023\sim0.137$のように$\sim$ではなく$-$を使うのが一般的
+      \item 「$p_0\cos^{p_1}\theta+p_2$でフィッティングを行い」など、フィッティング関数のどの部分がフィッティングパラメータなのか明記すべき
+    \end{itemize}
+  \subsection{理論}
+    \begin{itemize}
+      \item 数値と単位の間のスペース忘れないようにしよう
+      \begin{itemize}
+        \item[$\Rightarrow$] 開ける大きさは半角スペースひとつ分であり、LaTeXの数式モード内の「\textbackslash,」は半角スペースの半分だけしか開かないため注意。今まで「\textbackslash,」が半角スペースと同じ大きさだと勘違いしていた。(参考: 図\ref{fig:tex-space})
+        
+        図は省略
+      \end{itemize}
+      \item 他の文献からの引用をするときは\cite{PDG:ptm}のように書いて、最後のセクションなどに引用元をまとめて記すのが良い
+      \begin{itemize}
+        \item[$\Rightarrow$] thebibliography環境で管理する試みをしてみた。subfileシステムとも互換性も確認した。
+      \end{itemize}
+      \item 物理定数、例えば光速度などを$c$などと表すときはそれを宣言すること
+      \item (全体的に)口語にならないように意識する
+      \item 議論の流れから外れるサブ議論をtcolorboxなどを使ってコラム的に書くことは報告書には相応しくない
+    \end{itemize}
+  \subsection{実験1}
+    \begin{itemize}
+      \item 表のキャプションは表の上に配置するのがルール
+    \end{itemize}
+  \subsection{実験3.5}
+    \begin{itemize}
+      \item itemize環境を複数個使って、入れ子構造にして配置するのは思考の整理には便利であるが、報告書としてはふさわしくない。文章として書く。
+    \end{itemize}
+  \subsection{付録}
+    \begin{itemize}
+      \item 付録の前に全体のまとめ(結論)や今後の展望があると良い
+    \end{itemize}
+  
+\end{document}
